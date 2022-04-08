@@ -1,3 +1,5 @@
+const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
+
 const takeUntil = function(array, callback) {
   const result = [];
   for (const items of array) {
@@ -8,4 +10,5 @@ const takeUntil = function(array, callback) {
   }
 };
 
-}}
+const result = takeUntil(data1, x => x < 0);
+console.log(result);
