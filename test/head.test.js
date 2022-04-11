@@ -1,6 +1,6 @@
 const head = require('../head');
 const assert = require('assert')
-const mocha = require('mocha')//??
+// const mocha = require('mocha')//??
 
 describe("#head", () => {
   
@@ -16,8 +16,3 @@ describe("#head", () => {
     assert.strictEqual(head(['5']), '5'); 
   });
 });
-
-//assertEqual(head([5,6,7]), 5);
-//assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
-//assertEqual(head([]));
-//assertEqual(head(["Hello"]));
