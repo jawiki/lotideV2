@@ -16,4 +16,4 @@ function without(source,itemsToRemove) {
 
 }
 
-}
+module.exports = without;
