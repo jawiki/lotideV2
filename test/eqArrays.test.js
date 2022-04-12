@@ -10,14 +10,14 @@ const assert = require('chai').assert
 describe("#eqArrays", () => {
   
   it("returns 'true' for [1, 2, 3], [1, 2, 3]", () => {
-    assert.strictEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
+    assert.deepEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
   });
 
   it("returns 'false' for [1], [3]", () => {
-    assert.strictEqual(eqArrays([1], [3]), false); 
+    assert.deepEqual(eqArrays([1], [3]), false); 
   });
 
-  // it("returns 'true' for [1, 2, 3], ["hello"]", () => {
-  //   assert.strictEqual(eqArrays(['5']), '5'); 
-  // });
+  it("returns 'false' for [1, 2, 3], [5] ", () => {
+    assert.deepEqual(eqArrays([1, 2, 3], [5]), true); 
+  });
 });

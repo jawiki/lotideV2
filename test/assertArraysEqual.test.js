@@ -1,22 +1,17 @@
 const assertArraysEqual = require('../assertArraysEqual');
 const assert = require('chai').assert
 
-assertArraysEqual([1, 2, 3], [1, 2, 3])
-assertArraysEqual([1, 2, 3], [3, 2, 1])
-assertArraysEqual(['1', '2', '3'], ['1', '2', '3'])
-assertArraysEqual(['1', '2', '3'], ['1', '2', 3])
-
 describe("#assertArraysEqual", () => {
   
-  it("returns 1 for [1, 2, 3]", () => {
-    assert.strictEqual(assertArraysEqual([1, 2, 3]), 1);
+  it("returns true for [1, 2, 3], [1, 2, 3]", () => {
+    assert.deepEqual(assertArraysEqual([1, 2, 3], [1, 2, 3]), true);
   });
 
-  it("returns '5' for ['5']", () => {
-    assert.strictEqual(assertArraysEqual(['5']), '5'); 
+  it("returns true for ['1', '2', '3'], ['1', '2', '3']", () => {
+    assert.deepEqual(assertArraysEqual(['1', '2', '3'], ['1', '2', '3']), true); 
   });
 
-  it("returns '3' for [3, 5, 7]", () => {
-    assert.strictEqual(assertArraysEqual(['5']), '5'); 
+  it("returns false for [3, 5, 7], [6, 6, 6]", () => {
+    assert.deepEqual(assertArraysEqual([3, 5, 7], [6, 6, 6]), false); 
   });
 });
